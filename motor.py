@@ -12,8 +12,6 @@ root = '/home/robotics/Public_HDD/Jinhyuk/MFCC_data/'
 def load_raw_whole():
     pass
 
-
-
 def load_MFCC_whole():
     f = open(root + 'data_MFCC_only_whole_good' + '.txt', 'r', encoding='utf-8')
     raw_data = np.array(list(csv.reader(f)))
@@ -186,9 +184,6 @@ def load_DWT_transient():
     return data_DWT_transient   
 
 
-def load_label():
-    y_whole = np.append(np.zeros(100),np.ones(50))    # 0 for normal, 1 for defect
-    return y_whole
 
 def resampleData(data_whole, y_whole):
     num_data = np.shape(data_whole)[0]
