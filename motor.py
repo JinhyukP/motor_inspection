@@ -6,7 +6,6 @@ trSampleRatio = 0.85
 data_dim_CWT = 13
 data_dim_DWT = 13
 # root = 'C:\\Users\\JINHYUK2019\\Desktop\\motorInspection_my_codes\\MFCC_data\\'  
-# root = '/home/robotics/Jinhyuk/motor_inspection/MFCC_data/'
 root = '/home/robotics/Public_HDD/Jinhyuk/MFCC_data/'
 
 def load_raw_whole():
