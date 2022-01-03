@@ -99,5 +99,5 @@ def get_dataset(data_cfg):
     return dataset
 
 def get_label():
-    y_whole = np.append(np.zeros(100),np.ones(50))    # 0 for normal, 1 for defect
-    return y_whole
+    # 0 for normal, 1 for defect
+    return np.append(np.zeros(100),np.ones(50))
