@@ -2,8 +2,8 @@ import numpy as np
 import csv
 
 # path to data directory
-# root = '/home/robotics/Public_HDD/Jinhyuk/MFCC_data/'
-root = 'C:\\Users\\JINHYUK2019\\Desktop\\motorInspection_my_codes\\MFCC_data\\'  
+root = '/home/robotics/Public_HDD/Jinhyuk/MFCC_data/'
+# root = 'C:\\Users\\JINHYUK2019\\Desktop\\motorInspection_my_codes\\MFCC_data\\'  
 
 def get_dataset(data_cfg):
     """
