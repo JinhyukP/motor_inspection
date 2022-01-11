@@ -1,3 +1,6 @@
+# temp folder
+temp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,6 +11,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -73,6 +77,7 @@ docs/_build/
 
 # PyBuilder
 target/
+.hypothesis/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -127,3 +132,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# pyenv
+.python-version
+
+# input data, saved log, checkpoints
+data/
+input/
+saved/
+datasets/
+
+# editor, os cache directory
+.vscode/
+.idea/
+__MACOSX/
