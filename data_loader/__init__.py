@@ -14,6 +14,10 @@ def get_dataset(data_cfg):
     division = data_cfg["division"]   # whole, steady, transient
     dataDim = data_cfg["dataDimension"]
     
+    assert name in ["raw", "MFCC", "LPC", "PLP", "CWT", "DWT"]
+    assert division in ["whole", "steady", "transient"]
+    assert type(dataDim) == int
+    
     # ====================== special case for raw data =========================
     if name == 'raw':
         if division == "whole":
@@ -64,7 +68,17 @@ def get_dataset(data_cfg):
         filename_front = 'data_' + name + '_only_' + division
         
     elif name == 'LPC':
-        filename_front = 'data_' + name + '_only_' + division
+        filename = 'data_' + name + '_' + division + '.txt'  # data_LPC_whole.txt, data_LPC_steady.txt, data_LPC_transient.txt
+        
+        f = open(root + filename, 'r', encoding='utf-8')
+        raw_data = np.array(list(csv.reader(f)))
+        f.close
+        data_num = np.shape(raw_data)[0]
+        data = np.zeros([data_num, dataDim])
+        for j in range(data_num):
+            data[j, :] = raw_data[j, 0].split(' ')
+        del raw_data
+        return data
         
     elif name == 'CWT':
         filename_front = 'data_' + name + '_only_' + division
